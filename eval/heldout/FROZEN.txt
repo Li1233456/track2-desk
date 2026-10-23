@@ -2,4 +2,4 @@ Held-out inbox frozen.
 Messages: 43 (dropped: H43)
 System commit for the first run: 3e9f2ee
 The system commit predates the writing of these messages; no change to the prompt, parser or llm/ code was made before the first run.
-Freeze commit: <fill in after the merge>
+Freeze commit: 4a10cd6 (merged to main as 7918ac3 via PR #4)
