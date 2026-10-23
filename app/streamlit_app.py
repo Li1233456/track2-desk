@@ -64,9 +64,9 @@ OBJECTIVE_HELP = {
     "lateness_v1": "Round-1 setting (equals earliest finish). Kept for comparison.",
     "hybrid_v0": "Round-1 hybrid weights. Kept for comparison.",
 }
-# Settings offered in the interface: the primary objective, its earliest-finish variant, one other objective and the
-# weighted hybrid. The rest stay in kernel.allocator.OBJECTIVES for the harness, the CLI and the tests.
-UI_OBJECTIVES = ["use_slack", "lateness", "defects", "hybrid"]
+# Settings offered in the interface: the primary objective, one other objective and the weighted hybrid.
+# The rest stay in kernel.allocator.OBJECTIVES for the harness, the CLI and the tests.
+UI_OBJECTIVES = ["use_slack", "defects", "hybrid"]
 SENDERS = ["Boss", "Chen", "Ravi", "Priya", "Mei"]
 
 
@@ -556,7 +556,7 @@ def run_sim(seed: int, shock: bool, seeds: int) -> pd.DataFrame:
 with tab_sim:
     st.subheader("Shared simulator · 120 orders replayed")
     st.caption("Runs the untouched harness/simulate.py (v3): the three official baselines, the simple rule-based allocator (earliest finish) "
-               "and the four objective settings offered in the sidebar.")
+               "and the three objective settings offered in the sidebar.")
     s1, s2, s3 = st.columns([1, 1, 2])
     seed = s1.number_input("First seed", value=5105, step=1)
     ten = s2.toggle("Average 10 seeds", value=True, help="Tracks v4 asks for shock results averaged over ten seeds (5105–5114).")
