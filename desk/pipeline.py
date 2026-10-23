@@ -61,7 +61,7 @@ def days(n: int) -> str:
 
 
 class Desk:
-    def __init__(self, parser=None, objective: str = "lateness"):
+    def __init__(self, parser=None, objective: str = "use_slack"):
         self.W = load_workshops()
         self.O = load_orders()
         self.ledger = Ledger(self.W, TODAY)
@@ -597,7 +597,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--llm", action="store_true", help="use the LLM for parsing, GPT-5 mini by default (costs money)")
     ap.add_argument("--only", default=None, help="print full detail for one request id, e.g. R12")
-    ap.add_argument("--objective", default="lateness", choices=list(OBJECTIVES))
+    ap.add_argument("--objective", default="use_slack", choices=list(OBJECTIVES))
     args = ap.parse_args()
 
     client = LLMClient(provider="openai") if args.llm else None
