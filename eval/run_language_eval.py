@@ -186,7 +186,7 @@ def main():
     ap.add_argument("--model", default="", help="LLM model id (default: DESK_LLM_MODEL or gpt-5-mini)")
     ap.add_argument("--prompt", choices=["v1", "v2"], default="v2", help="extraction prompt version (llm/llm_client.py PROMPTS)")
     ap.add_argument("--no-grounding", action="store_true", help="skip the code check of extracted values against the message text")
-    ap.add_argument("--objective", default="lateness")
+    ap.add_argument("--objective", default="use_slack")
     ap.add_argument("--env", default="", help="path to a .env holding OPENAI_API_KEY (read, never copied)")
     ap.add_argument("--out", default=str(ROOT / "eval" / "runs"))
     ap.add_argument("--tag", default="official30")

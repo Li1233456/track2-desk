@@ -145,7 +145,7 @@ def test_standing_constraint_set_later_is_labelled():
 
 
 def test_in_order_replay_does_not_apply_a_constraint_backwards():
-    desk = Desk()
+    desk = Desk(objective="lateness")             # expected shops below were set under the lateness rule
     for ln in inbox_lines():
         desk.handle(ln)
     assert desk.decisions["R08"]["recommended"] == "W1"            # refused FreshStart at 08:29; QuickStitch still allowed

@@ -56,8 +56,8 @@ GROUPS = [  # (key, label, statuses) in the order a dispatcher works through the
     ("done", "Done", {"committed"} | HUMAN_STATUSES),
 ]
 OBJECTIVE_HELP = {
-    "lateness": "Primary. On time even if reworked, specialist shop first, then earliest finish.",
-    "use_slack": "Same rule, but takes the latest safe finish: slower turnaround, lower cost.",
+    "lateness": "On time even if reworked, specialist shop first, then earliest finish: faster turnaround, higher cost.",
+    "use_slack": "Primary. On time even if reworked, specialist shop first, then the latest safe finish: lower cost, slower turnaround.",
     "hybrid": "Lateness with a weight on defects and on spreading the work.",
     "defects": "Lowest defect rate among shops that make the date.",
     "fairness": "Spreads work across shops, never at the price of a late batch.",
@@ -77,7 +77,7 @@ def new_desk(objective: str, use_llm: bool) -> Desk:
 
 if "desk" not in st.session_state:
     st.session_state.use_llm = False
-    st.session_state.desk = new_desk("lateness", False)
+    st.session_state.desk = new_desk("use_slack", False)
     st.session_state.selected = None
 desk: Desk = st.session_state.desk
 
