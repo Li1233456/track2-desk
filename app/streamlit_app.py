@@ -28,7 +28,6 @@ sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "harness"))
 
 from desk.pipeline import Desk, inbox_lines, HUMAN_STATUSES  # noqa: E402
-from kernel.allocator import OBJECTIVES  # noqa: E402
 from kernel.orders import TODAY  # noqa: E402
 from kernel.register import eligibility_table  # noqa: E402
 from llm.llm_client import DEFAULT_MODEL, LLMClient  # noqa: E402
@@ -65,6 +64,9 @@ OBJECTIVE_HELP = {
     "lateness_v1": "Round-1 setting (equals earliest finish). Kept for comparison.",
     "hybrid_v0": "Round-1 hybrid weights. Kept for comparison.",
 }
+# Settings offered in the interface: the primary objective, its earliest-finish variant, one other objective and the
+# weighted hybrid. The rest stay in kernel.allocator.OBJECTIVES for the harness, the CLI and the tests.
+UI_OBJECTIVES = ["use_slack", "lateness", "defects", "hybrid"]
 SENDERS = ["Boss", "Chen", "Ravi", "Priya", "Mei"]
 
 
@@ -129,7 +131,8 @@ with st.sidebar:
     st.title("🧶 Subcontracting Desk")
     st.caption(f"SweaterCo · today {TODAY:%a %d %b %Y}")
 
-    objective = st.selectbox("Objective", list(OBJECTIVES), index=list(OBJECTIVES).index(desk.alloc.objective),
+    shown = UI_OBJECTIVES + [o for o in [desk.alloc.objective] if o not in UI_OBJECTIVES]
+    objective = st.selectbox("Objective", shown, index=shown.index(desk.alloc.objective),
                              format_func=lambda o: o.replace("_", " "), help="How eligible workshops are ranked. Changing it re-ranks every open request.")
     st.caption(OBJECTIVE_HELP.get(objective, ""))
     if objective != desk.alloc.objective:
@@ -534,7 +537,7 @@ def run_sim(seed: int, shock: bool, seeds: int) -> pd.DataFrame:
     from kernel.allocator import Allocator, earliest_finish
     pols = [("random", random_choice, "official baseline"), ("greedy_biggest", greedy_biggest, "official baseline"),
             ("cheapest", cheapest, "official baseline"), ("earliest_finish", earliest_finish, "simple rule-based allocator")]
-    pols += [(o, Allocator(o), "our allocator") for o in OBJECTIVES]
+    pols += [(o, Allocator(o), "our allocator") for o in UI_OBJECTIVES]
     acc = {}
     for s in range(seed, seed + seeds):
         sim = Simulator(shock=shock, seed=s)
@@ -553,7 +556,7 @@ def run_sim(seed: int, shock: bool, seeds: int) -> pd.DataFrame:
 with tab_sim:
     st.subheader("Shared simulator · 120 orders replayed")
     st.caption("Runs the untouched harness/simulate.py (v3): the three official baselines, the simple rule-based allocator (earliest finish) "
-               "and every objective setting.")
+               "and the four objective settings offered in the sidebar.")
     s1, s2, s3 = st.columns([1, 1, 2])
     seed = s1.number_input("First seed", value=5105, step=1)
     ten = s2.toggle("Average 10 seeds", value=True, help="Tracks v4 asks for shock results averaged over ten seeds (5105–5114).")
