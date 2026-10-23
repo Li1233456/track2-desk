@@ -1,0 +1,44 @@
+# Held-out inbox, morning of 2026-04-01. Human-written. Do not share before the freeze.
+H01 [07:50] Boss: Send out that big one for Northwind Apparel.
+H02 [07:55] Boss: What's the price for order 400 pieces of Crewneck sweater to TrendCart.
+H03 [08:00] Ravi: How is the order for Loom&Leaf?
+H04 [08:06] Chen: Don‘t give SteadyHands more new orders until the end of this week, and please send out ORD-073
+H05 [08:11] Boss: ORD-082:We need 600 Beanies for TrendCart before 1st May,2026
+H06 [08:15] Priya: I plan to purchase some Polo shirts again, costumer is Cotton Club. I would like to place another order for the same quantity, based on the previous order's goods and customer which are the same as this order.
+H07 [08:19] Priya: ORD-40:We need 1200 hoodies for Loom & Leaf before 21st April. Who can take this order?
+H08 [08:23] Boss: I need more scarves for Harbor Knits.
+H09 [08:29] Ravi: ORD-45:150 vests for Cotton Club. DDL April 9. Please as soon as possible, no matter how expensive it is.
+H10 [08:33] Mei: ORD-061:800 scarfs for Harbor Knits, due 05 April. Can it be made?
+H11 [08:39] Mei: ORD-015:500 vests for Harbor knits, due 13 April. give it to Little Loom and it made-well
+H12 [08:45] Ravi: ORD-017, 800 Cardigans for TrendCart, deadline is 2026-04-10, and they are processed in FreshStart.
+H13 [08:51] Mei: We want FreshStart to finish ORD-029.
+H14 [08:55] Priya: scarf need to be sent out.
+H15 [09:00] Ravi: ORD-062 - 2,000 Scarf for Bright Basics,get back as soon as possible,due Apr 8.
+H16 [09:06] Chen: The deadline of ORD-066 will be ahead of schedule, but the exact time is not sure. Please find the right factory.
+H17 [09:11] Chen: ORD-010, 1000 pieces for Cotton Club, by 2026-04-25
+H18 [09:16] Mei: ORD-082, 600 Beanies for TrendCart, deadline is 2026-05-01. I would like to create the same order again, and arrange it at the later dates.
+H19 [09:21] Chen: ORD-095 - 800 Hoodies for Bright Basics，due Apr 26.
+H20 [09:27] Mei: ORD-099:1500 Polo shirts for Northwind Apparel before April 5. The customer is urging.
+H21 [09:31] Boss: ORD-108: 2000 Scarves, customer is Harbor Knits,DDL is April 3
+H22 [09:36] Ravi: ORD-036 - 1,000 Scarf for UrbanThread，due Apr 26.
+H23 [09:42] Ravi: the order of Cotton Club i surged and sent it out
+H24 [09:47] Priya: My boss told me choose any workshops except QuickStitch, please take this constraint into consideration
+H25 [09:52] Chen: Please allocate the order for TrendCArt.
+H26 [09:56] Priya: how did 300 vests from the BudgetWorks last year?
+H27 [10:02] Mei: ORD-024, 300 vests for Loom & Leaf, deadline is 2026-04-15. Don’t choose workshop called Nimble Needle.
+H28 [10:06] Mei: Could I order Hoodies from availiable workshops?Client is TrendCart.
+H29 [10:12] Mei: ORD-081 - 1,500 Crewneck sweater for Harbor Knits，due Apr 13.Lowest price that can still on time.
+H30 [10:18] Boss: Who is the manager of the QuickStitch?
+H31 [10:23] Boss: Check ORD-041, 600 Beanies for Harbor Knits. They are due to be sent before 2026-04-21
+H32 [10:27] Priya: Need hundreds of Hoodies to send out for Harbor Knits.
+H33 [10:33] Mei: ORD-035:300 beanies for Loom & Leaf, due 29 April.
+H34 [10:38] Chen: ORD-020, 1200 vests for TrendCart, by 2026-03-31
+H35 [10:43] Ravi: ORD-005:500 scarfs for TrendCart,due 20 Apr.give this to the one with the lowest defect rate.
+H36 [10:49] Boss: Give the ORD-008 to OldMill.
+H37 [10:54] Priya: ORD-063:100 cardigans for Loom & Leaf,who just called,due 29 Apr.
+H38 [11:00] Priya: ORD-096 - 1,000 Beanie for TrendCart，due Apr 17.Split into two workshop if it is faster.
+H39 [11:05] Ravi: ORD-035:600 cardigans for UrbanThread, sent it out.
+H40 [11:11] Chen: the order of Loom & Leaf still waiting for the quantity of vests.
+H41 [11:15] Chen: Send ORD-010 - 1,000 Cardigan for Cotton Club to SteadyHands,back by Apr 25.
+H42 [11:20] Ravi: Can you send ORD-035 - 300 Beanie for Loom & leaf to QuickStitch?Due Apr 25.
+H44 [11:28] Boss: ORD-015:300 vests for UrbanThread, due 16 April. don't give it to BudgetWorks and need to be fast
